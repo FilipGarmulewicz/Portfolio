@@ -1,0 +1,724 @@
+:root {
+  --dark-blue: #1f2041;
+  --white: #f9f9f9;
+  --gray: #adb6c4;
+  --red: #af0808;
+  --gold: #d4af37;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--dark-blue);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  background-color: var(--white);
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  color: var(--white);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 37px 120px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header_div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+}
+
+.header_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  position: absolute;
+  height: 500px;
+  top: 0;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+
+header img {
+  width: 37.5px;
+  height: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+.burger_wrapper {
+  padding: 12.5px 6.25px;
+  display: none;
+}
+
+.burger_ul {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 28px 0 28px 37px;
+  margin: 90px 0 124px;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  background-color: var(--dark-blue);
+}
+
+header li,
+footer li {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.logo_div {
+  display: flex;
+}
+
+.logo_div h1 + h1 {
+  color: var(--gray);
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+h2 {
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 100%;
+  font-family: "League Gothic", sans-serif;
+  margin: 0;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%;
+  font-family: "League Spartan", sans-serif;
+  margin: 0;
+  letter-spacing: 12px;
+}
+
+footer {
+  color: var(--white);
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 30px;
+  padding: 60px 0 110px 120px;
+  margin: 0;
+}
+
+.footer_div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 176px 120px 60px 0;
+  font-weight: 700;
+}
+
+footer h1 {
+  font-size: 27px;
+}
+
+.footer_h1 {
+  display: flex;
+}
+
+.footer_h1 > h1 + h1 {
+  color: var(--gray);
+}
+
+.footer_h1 > h1 + h1 + h1 {
+  color: var(--white);
+}
+
+.first_section,
+.about_page {
+  padding: 84px 241px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  height: auto;
+}
+
+.home_img {
+  width: 100%;
+}
+
+.small_img {
+  align-self: center;
+  display: none;
+  width: 50%;
+  min-width: 288px;
+}
+
+h4 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 17px;
+}
+
+.about_me {
+  padding-top: 65px;
+}
+
+.about_me p {
+  margin: 0;
+}
+
+.my_skills {
+  padding: 40px 0 0;
+}
+
+.my_skills_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 32px;
+  column-gap: 75px;
+}
+
+.skill {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill_img {
+  width: 56px;
+  height: 64px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+}
+
+.white_dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 1px solid var(--dark-blue);
+}
+
+.skill_dots {
+  display: flex;
+  gap: 12px;
+}
+
+.skill_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill_years {
+  color: var(--gray);
+}
+
+.home_projects_div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 41px;
+  padding-bottom: 84px;
+  row-gap: 84px;
+}
+
+.home_buttons_div {
+  display: flex;
+  gap: 55px;
+  padding-bottom: 84px;
+}
+
+.home_btn {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--gray);
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0 0 0 / 25%));
+  display: block;
+}
+
+.home_btn2 {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--gray);
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0 0 0 / 25%));
+  display: none;
+}
+
+.contact_btn {
+  height: 60px;
+  width: 240px;
+  background-color: var(--gray);
+  border: none;
+  border-radius: 8px;
+  color: var(--dark-blue);
+  filter: drop-shadow(0px 4px 4px rgba(0 0 0 / 25%));
+  cursor: pointer;
+  position: relative;
+  padding-left: 36px;
+  margin-top: 84px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.arrow_icon {
+  position: absolute;
+  top: 18px;
+  left: 49px;
+  height: 24px;
+  width: 30px;
+}
+
+.contact_page {
+  padding: 65px 120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1920px;
+}
+
+.contact_h4 {
+  margin-bottom: 65px;
+}
+
+label {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  padding-bottom: 27px;
+}
+
+form {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message_btn {
+  height: 60px;
+  width: 240px;
+  background-color: var(--gray);
+  border: none;
+  border-radius: 8px;
+  color: var(--dark-blue);
+  filter: drop-shadow(0px 4px 4px rgba(0 0 0 / 25%));
+  cursor: pointer;
+  font-size: 16px;
+  align-self: center;
+  margin-top: 65px;
+}
+
+.form_div1 {
+  display: flex;
+  gap: 110px;
+}
+
+.input_div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form_div2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 41px;
+}
+
+.red_text {
+  color: var(--red);
+  font-size: 12px;
+  visibility: hidden;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid var(--dark-blue);
+}
+
+input:focus {
+  outline: none;
+}
+
+.messages_page {
+  display: flex;
+  flex-direction: column;
+  padding: 65px 120px;
+  width: 100%;
+  gap: 65px;
+  max-width: 1920px;
+}
+
+.message_div {
+  display: flex;
+  flex-direction: column;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+
+.projects_page {
+  display: flex;
+  flex-direction: column;
+  padding: 84px 139px;
+  width: 100%;
+  gap: 84px;
+  align-items: center;
+  max-width: 1920px;
+}
+
+.add_btn {
+  height: 60px;
+  width: 240px;
+  background-color: var(--gray);
+  border: none;
+  border-radius: 8px;
+  color: var(--dark-blue);
+  filter: drop-shadow(0px 4px 4px rgba(0 0 0 / 25%));
+  cursor: pointer;
+  font-size: 16px;
+  padding-left: 22.5px;
+}
+
+.plus_icon {
+  position: absolute;
+  top: 21.75px;
+  left: 49px;
+  height: 16.5px;
+  width: 16.5px;
+}
+
+.modal {
+  height: 424px;
+  width: 800px;
+  background-color: var(--white);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 2px 4px rgba(0 0 0 / 25%));
+  z-index: 3;
+  padding: 60px 120px 64px;
+  display: none;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+}
+
+.active.projects_page,
+.active#header,
+.active#footer {
+  filter: blur(12px);
+  margin-right: 15px;
+}
+
+.active.modal {
+  display: flex;
+}
+
+.close_icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.modal_div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add_btn2 {
+  height: 60px;
+  width: 240px;
+  background-color: var(--gray);
+  border: none;
+  border-radius: 8px;
+  color: var(--dark-blue);
+  filter: drop-shadow(0px 4px 4px rgba(0 0 0 / 25%));
+  cursor: pointer;
+  font-size: 16px;
+  padding-left: 22.5px;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.projects_div {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 41px;
+  row-gap: 84px;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  height: 460px;
+  width: 360px;
+  filter: drop-shadow(0px 4px 4px rgba(0 0 0 / 25%));
+  border-radius: 16px;
+  background: linear-gradient(to top, transparent, rgba(0 0 0)),
+    url("Images/Background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 18px 30px;
+}
+
+.project_home {
+  height: 460px;
+  width: 360px;
+  filter: drop-shadow(0px 4px 4px rgba(0 0 0 / 25%));
+  border-radius: 16px;
+  background: linear-gradient(to top, transparent, rgba(0 0 0)),
+    url("Images/Background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 18px 30px;
+}
+
+.project_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.project_li {
+  color: var(--white);
+  line-height: 150%;
+  padding-bottom: 30px;
+}
+
+.erase_icon {
+  background-color: var(--white);
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.projects_page h4 {
+  margin-bottom: 347px;
+}
+
+.no_projects {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .my_skills_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1260px) {
+  .projects_div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home_projects_div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1152px) {
+  .my_skills_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .header_div {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .first_section,
+  .about_page,
+  .contact_page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contact_h4 {
+    margin-bottom: 30px;
+  }
+
+  .form_div1 {
+    flex-direction: column;
+    gap: 54px;
+  }
+
+  .form_div2 {
+    padding-top: 54px;
+  }
+
+  .input_div {
+    width: 100%;
+  }
+
+  .projects_page {
+    padding: 84px 10px;
+  }
+
+  .messages_page {
+    padding: 84px 10px;
+    gap: 84px;
+  }
+
+  .modal {
+    height: 344px;
+    width: 300px;
+    padding: 40px 10px;
+    gap: 25px;
+  }
+
+  .add_btn2 {
+    margin-top: 0;
+  }
+
+  .project_home {
+    width: 300px;
+  }
+
+  .home_btn {
+    display: none;
+  }
+
+  .home_btn2 {
+    display: block;
+  }
+
+  .home_projects_div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .projects_div {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 41px;
+  }
+
+  .project {
+    width: 300px;
+  }
+
+  .projects_page {
+    padding-bottom: 41px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 16px;
+  }
+
+  .header_div {
+    flex-direction: row;
+  }
+
+  .logo_div h1 + h1,
+  header ul,
+  footer ul {
+    display: none;
+  }
+
+  .burger_wrapper,
+  header img {
+    display: flex;
+  }
+
+  .home_img {
+    display: none;
+  }
+
+  .small_img {
+    display: flex;
+  }
+
+  footer {
+    justify-content: center;
+    height: 232px;
+  }
+
+  .footer_div {
+    padding: 60px 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .my_skills_list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1921px) {
+  main {
+    min-height: 100vh;
+  }
+}
